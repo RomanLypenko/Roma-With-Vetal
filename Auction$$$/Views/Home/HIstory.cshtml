@@ -1,4 +1,4 @@
-﻿@model Auction___.Models.MyHistory
+﻿@model List<Auction___.Models.MyHistory>
 @{
     ViewData["Title"] = "HIstory";
     Layout = "~/Views/_Layout2.cshtml";
@@ -6,4 +6,16 @@
 }
 
 <h1>HIstory</h1>
+@{
+    int i = 0;
+    foreach (var item in Model)
+    {
+        i++;
+    <h2>Bid№@i</h2>
+    <p>Lot :@item.Lot.Name</p>
+    <p>Bid Price :@item.BidPrice</p>
+    <p>Time : @item.BidTime</p>
+    }
+
+ }
 
