@@ -19,6 +19,7 @@ namespace Auction___
 
         public DbSet<MyHistory> HisoryAll { get; set; }
 
+      
 
 
 

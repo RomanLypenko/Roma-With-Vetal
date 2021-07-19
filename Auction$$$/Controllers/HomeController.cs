@@ -71,6 +71,8 @@ namespace Auction___.Controllers
         {
             var ent = db.usersModels.SingleOrDefault(i =>i.isReg==true);
             lot.User = ent;
+            lot.Finalprice = lot.InitialPrice;
+
             db.usersLots.Add(lot);
             db.SaveChanges();
             return RedirectToAction("IsEnter");
@@ -103,7 +105,7 @@ namespace Auction___.Controllers
         public IActionResult Edit(AllLots lot)
         {
             lot.User = db.usersModels.SingleOrDefault(i => i.isReg);
-
+            lot.Finalprice = lot.InitialPrice;
             db.Update(lot);
             db.SaveChanges();
 
@@ -146,6 +148,7 @@ namespace Auction___.Controllers
         public IActionResult Bid_on(int Id)
         {
             var ent = db.usersLots.Include(i=>i.User).SingleOrDefault(i => i.Id == Id);
+            ViewData["sum"] = db.usersModels.SingleOrDefault(i => i.isReg).Balance;
             return View(ent);
         }
         [HttpPost]

@@ -8,18 +8,19 @@
 <p>Name : @Model.Name</p>
 <p>UserName : @Model.User.UserName</p>
 <p>initialPrice : @Model.InitialPrice</p>
+<p class="finalprice">curentPrice : @Model.Finalprice</p>
 <p>Description : @Model.Discription</p>
 <p>Make Bid</p>
-<form asp-action="Bid_on" asp-controller="home">
-   
-<div class="form-group">
-    <label asp-for="Finalprice" class="control-label">Finalprice</label>
-    <input type="number" name="Finalprice"   value="" class="form-control" />
-</div>
+<form name="myForm" onsubmit="return validateForm(@ViewData["sum"],@Model.Finalprice)" asp-action="Bid_on"  asp-controller="home">
 
-<div class="form-group">
-    <input type="submit" value="Отправить"  class="btn btn-default" />
-</div>
+    <div class="form-group">
+        <label asp-for="Finalprice" class="control-label">Finalprice</label>
+        <input type="number" name="Finalprice" value="" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
 </form>
 
 
