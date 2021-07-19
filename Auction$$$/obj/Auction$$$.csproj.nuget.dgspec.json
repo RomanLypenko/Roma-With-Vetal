@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Рома\\source\\repos\\Auction$$$\\Auction$$$\\Auction$$$.csproj": {}
+    "C:\\Users\\vital\\OneDrive\\Документи\\GitHub\\Roma-With-Vetal\\Auction$$$\\Auction$$$.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Рома\\source\\repos\\Auction$$$\\Auction$$$\\Auction$$$.csproj": {
+    "C:\\Users\\vital\\OneDrive\\Документи\\GitHub\\Roma-With-Vetal\\Auction$$$\\Auction$$$.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Рома\\source\\repos\\Auction$$$\\Auction$$$\\Auction$$$.csproj",
+        "projectUniqueName": "C:\\Users\\vital\\OneDrive\\Документи\\GitHub\\Roma-With-Vetal\\Auction$$$\\Auction$$$.csproj",
         "projectName": "Auction$$$",
-        "projectPath": "C:\\Users\\Рома\\source\\repos\\Auction$$$\\Auction$$$\\Auction$$$.csproj",
-        "packagesPath": "C:\\Users\\Рома\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Рома\\source\\repos\\Auction$$$\\Auction$$$\\obj\\",
+        "projectPath": "C:\\Users\\vital\\OneDrive\\Документи\\GitHub\\Roma-With-Vetal\\Auction$$$\\Auction$$$.csproj",
+        "packagesPath": "C:\\Users\\vital\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vital\\OneDrive\\Документи\\GitHub\\Roma-With-Vetal\\Auction$$$\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Рома\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vital\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
