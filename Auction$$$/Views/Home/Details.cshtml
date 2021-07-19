@@ -6,7 +6,7 @@
 
 <h1>Details<br /></h1>
 <p>Name : @Model.Name</p>
-<p>UserName : @Model.User.UserName</p>
+@*<p>UserName : @Model?.User?.UserName</p>*@
 <p>initialPrice : @Model.InitialPrice</p>
 <p>Description : @Model.Discription</p>
 @{
@@ -16,7 +16,7 @@
     {
         i++;
             <h2>Bid№@i</h2>
-            <p>UserName :@item.WhoiAm.UserName</p>
+            <p>UserName :@item?.WhoiAm?.UserName</p>
             <p>Bid Price :@item.BidPrice</p>
             <p>Time : @item.BidTime</p>
     }

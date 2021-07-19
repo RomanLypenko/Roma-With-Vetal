@@ -12,7 +12,7 @@ function validateForm(sumbalance, maxbid) {
     {
         alert("Cтавка замала");
         return false;
-
+       
     }
 
 

@@ -91,7 +91,7 @@ namespace Auction___.Controllers
         }
         public IActionResult Details(int Id, string Name)
         {
-            var ent=db.usersLots.Include(i => i.LotBids).Include(i => i.User).SingleOrDefault(i => i.Id == Id);
+            var ent=db.usersLots.Include(i => i.LotBids).ThenInclude(i => i.WhoiAm).SingleOrDefault(i => i.Id == Id);
             return View(ent);
 
         }
@@ -127,7 +127,7 @@ namespace Auction___.Controllers
         }
         public IActionResult History()
         {
-            return View(db.usersModels.Include(i=>i.HistoriesBids).Include(i => i.MyLots).SingleOrDefault(i=>i.isReg==true).HistoriesBids);
+            return View(db.usersModels.Include(i=>i.HistoriesBids).ThenInclude(i => i.Lot).SingleOrDefault(i=>i.isReg==true).HistoriesBids);
         }
 
         
