@@ -1,0 +1,28 @@
+﻿@model List< Auction___.Models.AllLots>
+@{
+    ViewData["Title"] = "Lots";
+}
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>UsreName</td>
+        <td>InitialPrice</td>
+
+    </tr>
+    
+        @{
+            foreach (var item in Model)
+            {<tr>
+                <td>@item.Name</td>
+                <td>@item.User.UserName</td>
+                <td>@item.InitialPrice</td>
+            </tr>
+
+        }
+
+        }
+
+
+    </table>
+

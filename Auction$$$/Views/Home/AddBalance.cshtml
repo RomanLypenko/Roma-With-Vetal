@@ -1,0 +1,18 @@
+﻿@model Auction___.Models.UsersModel
+@{
+    ViewData["Title"] = "AddBalance";
+}
+
+<h1>AddBalance</h1>
+<form asp-action="AddBalance" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="Balance" class="control-label">AddBalance</label>
+        <input name="Balance" type="number" asp-for="Balance" value="" class="form-control" />
+    </div>
+    
+
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>
+

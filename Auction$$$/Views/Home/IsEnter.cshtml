@@ -1,0 +1,34 @@
+﻿@model List<Auction___.Models.AllLots>
+
+@{
+    ViewData["Title"] = "IsEnter";
+    Layout = "~/Views/_Layout3.cshtml";
+
+}
+
+
+<h1>IsEnter<br /></h1>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>UsreName</td>
+        <td>InitialPrice</td>
+
+    </tr>
+
+    @{
+        foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.User.UserName</td>
+            <td>@item.InitialPrice</td>
+            <td><a asp-action="Bid_on" asp-controller="Home" asp-route-id="@item.Id" asp-route-name="@item.Name">Bid_on</a></td>
+        </tr>
+        }
+
+    }
+
+
+</table>
+

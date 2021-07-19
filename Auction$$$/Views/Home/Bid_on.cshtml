@@ -1,0 +1,25 @@
+﻿@model Auction___.Models.AllLots
+@{
+    ViewData["Title"] = "Bid_on";
+    Layout = "~/Views/_Layout2.cshtml";
+}
+
+<h1>Bid_on<br /></h1>
+<p>Name : @Model.Name</p>
+<p>UserName : @Model.User.UserName</p>
+<p>initialPrice : @Model.InitialPrice</p>
+<p>Description : @Model.Discription</p>
+<p>Make Bid</p>
+<form asp-action="Bid_on" asp-controller="home">
+   
+<div class="form-group">
+    <label asp-for="Finalprice" class="control-label">Finalprice</label>
+    <input type="number" name="Finalprice"   value="" class="form-control" />
+</div>
+
+<div class="form-group">
+    <input type="submit" value="Отправить"  class="btn btn-default" />
+</div>
+</form>
+
+
