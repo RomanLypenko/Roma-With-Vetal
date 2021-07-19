@@ -91,7 +91,7 @@ namespace Auction___.Controllers
         }
         public IActionResult Details(int Id, string Name)
         {
-            var ent=db.usersLots.Include(i=>i.User).SingleOrDefault(i => i.Id == Id);
+            var ent=db.usersLots.Include(i => i.LotBids).Include(i => i.User).SingleOrDefault(i => i.Id == Id);
             return View(ent);
 
         }
@@ -127,7 +127,7 @@ namespace Auction___.Controllers
         }
         public IActionResult History()
         {
-            return View();
+            return View(db.usersModels.Include(i=>i.HistoriesBids).Include(i => i.MyLots).SingleOrDefault(i=>i.isReg==true).HistoriesBids);
         }
 
         
@@ -157,12 +157,22 @@ namespace Auction___.Controllers
             var ent = db.usersLots.Include(i => i.User).SingleOrDefault(i => i.Id == Id);
             var User = db.usersModels.SingleOrDefault(i => i.isReg == true);
 
-            if (User.Balance > Finalprice)
+            if (User.Balance >= Finalprice)
             {
+
                 User.Balance -= Finalprice;
                 db.Update(User);                
                 ent.Finalprice = Finalprice;
                 db.Update(ent);
+
+
+
+                MyHistory His = new MyHistory();
+                His.BidPrice = Finalprice;
+                His.Lot = ent;
+                His.WhoiAm = User;
+                His.BidTime = DateTime.Now;
+                db.HisoryAll.Add(His);
                 db.SaveChanges();
                 return RedirectToAction("IsEnter");
             }

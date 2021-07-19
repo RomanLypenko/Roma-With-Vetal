@@ -9,5 +9,17 @@
 <p>UserName : @Model.User.UserName</p>
 <p>initialPrice : @Model.InitialPrice</p>
 <p>Description : @Model.Discription</p>
+@{
+
+ int i = 0;
+    foreach (var item in Model.LotBids)
+    {
+        i++;
+            <h2>Bid№@i</h2>
+            <p>UserName :@item.WhoiAm.UserName</p>
+            <p>Bid Price :@item.BidPrice</p>
+            <p>Time : @item.BidTime</p>
+    }
+ }
 
 

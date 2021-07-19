@@ -5,8 +5,16 @@
 function validateForm(sumbalance, maxbid) {
    
     let curentbid = Number (document.forms["myForm"]["Finalprice"].value);
-    if (curentbid < maxbid || curentbid > sumbalance) {
-        alert("Name must be filled out");
+    if  (curentbid > sumbalance) {
+        alert("Недостатьо коштів");
         return false;
+    } else if (curentbid <= maxbid)
+    {
+        alert("Cтавка замала");
+        return false;
+
     }
+
+
+
 }
